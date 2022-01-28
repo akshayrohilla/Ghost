@@ -15,7 +15,7 @@ variables:
   webAppName: 'ghostdevops'
 
   # Agent VM image name
-  vmImageName: 'Evermore-Ubuntu'
+  pool: Evermore-Ubuntu
 
 stages:
 - stage: Build
