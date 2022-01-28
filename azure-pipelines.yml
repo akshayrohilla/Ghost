@@ -30,6 +30,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: '$(Build.BuildId).zip'
     publishLocation: 'pipeline'
