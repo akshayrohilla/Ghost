@@ -54,7 +54,7 @@ stages:
     displayName: Deploy
     environment: E
     pool: Evermore-Ubuntu
-    
+
     strategy:
       runOnce:
         deploy:
@@ -69,4 +69,4 @@ stages:
               resourceGroupName: 'Aksh-RG'
               slotName: 'production'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
-              deploymentMethod: 'auto'
+              deploymentMethod: 'zipDeploy'
