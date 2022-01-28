@@ -14,17 +14,13 @@ variables:
   # Web app name
   webAppName: 'ghostdevops'
 
-  # Agent VM image name
-  pool: Evermore-Ubuntu
-
 stages:
 - stage: Build
   displayName: Build stage
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: $(vmImageName)
+    pool: Evermore-Ubuntu
 
     steps:
     - task: NodeTool@0
@@ -57,8 +53,8 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     environment: E
-    pool:
-      name: $(vmImageName)
+    pool: Evermore-Ubuntu
+    
     strategy:
       runOnce:
         deploy:
