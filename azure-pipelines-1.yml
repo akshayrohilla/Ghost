@@ -15,7 +15,7 @@ variables:
   webAppName: 'ghostdevops'
 
   # Agent VM image name
-  vmImageName: 'windows-latest'
+  vmImageName: 'Evermore-Ubuntu'
 
 stages:
 - stage: Build
@@ -59,7 +59,7 @@ stages:
     displayName: Deploy
     environment: E
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     strategy:
       runOnce:
         deploy:
