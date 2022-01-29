@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'c4b241e3-082b-46f1-a766-29ec9f1ba6e6'
 
   # Web app name
-  webAppName: 'ghostdevops'
+  webAppName: 'ghostdevwin'
 
 stages:
 - stage: Build
@@ -20,7 +20,8 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool: Evermore-Ubuntu
+    pool:
+     vmImage: windows-latest
 
     steps:
     - task: NodeTool@0
