@@ -71,3 +71,6 @@ stages:
               slotName: 'production'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               deploymentMethod: 'zipDeploy'
+          
+          - script: |
+              npm install
